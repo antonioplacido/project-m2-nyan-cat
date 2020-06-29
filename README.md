@@ -67,7 +67,8 @@ Having completed the basic section of this project is already great! However, ne
 
 In order for the project to be deemed _successful_ and for you to receive a passing grade
 
-- you need to complete step 1 completely.
+<!-- - you need to complete step 1 completely. -->
+
 - add at least 1 major improvement to the game (that changes the gameplay), and 1 minor improvement (eg. sound effects, "new game" button).
 
 ### Submission

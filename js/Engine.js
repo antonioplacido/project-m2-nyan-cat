@@ -85,7 +85,7 @@ class Engine {
         playerBot > enemyTop
       ) {
         isDead = true;
-        this.player.domElement.src = "images/epl.jpg";
+        this.player.domElement.src = "images/explo.png";
       }
     });
     return isDead;
