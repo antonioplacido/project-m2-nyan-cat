@@ -50,9 +50,12 @@ class Engine {
     this.enemies = this.enemies.filter((enemy) => {
       return !enemy.destroyed;
     });
+    this.enemies = this.enemies.filter((Megaseeds) => {
+      return !Megaseeds.destroyed;
+    });
 
     // We need to perform the addition of enemies until we have enough enemies.
-    while (this.enemies.length < MAX_ENEMIES) {
+    while (this.enemies.length < MAX_ENEMIES - 6) {
       // We find the next available spot and, using this spot, we create an enemy.
       // We add this enemy to the enemies array
       const spot = nextEnemySpot(this.enemies);

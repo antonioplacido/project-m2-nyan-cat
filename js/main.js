@@ -13,8 +13,6 @@ function startGame() {
   }, 1000);
 }
 
-function restartGame() {}
-
 const gameEngine = new Engine(document.getElementById("app"));
 
 BtnStart.addEventListener("click", startGame);
