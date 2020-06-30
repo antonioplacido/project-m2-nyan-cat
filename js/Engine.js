@@ -1,6 +1,7 @@
 // The engine class will only be instantiated once. It contains all the logic
 // of the game relating to the interactions between the player and the
 // enemy and also relating to how our enemies are created and evolve over time
+
 class Engine {
   // The constructor has one parameter. It will refer to the DOM node that we will be adding everything to.
   // You need to provide the DOM node when you create an instance of the class
@@ -16,6 +17,7 @@ class Engine {
     this.enemies = [];
     // We add the background image to the game
     addBackground(this.root);
+    this.newgame = true;
   }
 
   // The gameLoop will run every few milliseconds. It does several things
@@ -29,7 +31,10 @@ class Engine {
     if (this.lastFrame === undefined) {
       this.lastFrame = new Date().getTime();
     }
-
+    if (this.newgame === true) {
+      this.player.domElement.src = "images/rick.png";
+      this.newgame = false;
+    }
     let timeDiff = new Date().getTime() - this.lastFrame;
 
     this.lastFrame = new Date().getTime();
@@ -57,7 +62,9 @@ class Engine {
     // We check if the player is dead. If he is, we alert the user
     // and return from the method (Why is the return statement important?)
     if (this.isPlayerDead()) {
-      window.alert("Game over");
+      setTimeout(function () {
+        window.alert("You suck");
+      }, 1000);
       return;
     }
 
@@ -85,7 +92,8 @@ class Engine {
         playerBot > enemyTop
       ) {
         isDead = true;
-        this.player.domElement.src = "images/explo.png";
+        this.player.domElement.src = "images/jerry.png";
+        song.pause();
       }
     });
     return isDead;

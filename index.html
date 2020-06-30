@@ -1,18 +1,41 @@
 <html>
 <head>    
     <title>Nyan Kat</title> 
+<style>
+    /* forgive my transgressions i know there's supposed to be a CSS for the below... */
+        #startBtn{
+        position: absolute;
+        top: 425px;
+        left: 800px;
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+    #restartBtn{
+        position: absolute;
+        top: 525px;
+        left: 800px;
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+</style>
 </head> 
 <body>    
     <div id="app"></div> 
-    <audio controls>
-        <source src="themosthorriblesong/theshitstormsong.mp3" type="audio/mp3">
-    </audio>
+    <script>
+        const song = new Audio(); 
+        song.src="themosthorriblesong/theshitstormsong.mp3"
+    </script>
+    <div id="timer"class="timer"></div>
+    <button type="button" id="startBtn" onclick="song.play()">DON'T CLICK ME</button>
     <script src="js/data.js"></script> 
     <script src="js/Enemy.js"></script> 
     <script src="js/engine-utilities.js"></script> 
     <script src="js/Engine.js"></script> 
     <script src="js/Player.js"></script> 
     <script src="js/main.js"></script> 
+    
 </body> 
 </html> 
 
