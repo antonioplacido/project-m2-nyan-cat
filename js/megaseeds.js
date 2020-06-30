@@ -2,6 +2,7 @@
 // its position on screen. It will also provide methods for updating
 // and destroying the enemy.
 class Megaseeds {
+  //
   constructor(theRoot, enemySpot) {
     this.root = theRoot;
     this.spot = enemySpot;

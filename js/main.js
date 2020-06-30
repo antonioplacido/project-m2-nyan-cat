@@ -2,7 +2,7 @@
 // we see that it has a div with an id of `"app"`
 const BtnStart = document.getElementById("startBtn");
 const timer = document.getElementById("timer");
-
+//
 function startGame() {
   gameEngine.newgame = true;
   GAME_SPEED = INTIAL_GAME_SPEED;

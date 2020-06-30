@@ -1,7 +1,7 @@
 // The engine class will only be instantiated once. It contains all the logic
 // of the game relating to the interactions between the player and the
 // enemy and also relating to how our enemies are created and evolve over time
-
+//
 class Engine {
   // The constructor has one parameter. It will refer to the DOM node that we will be adding everything to.
   // You need to provide the DOM node when you create an instance of the class
@@ -25,6 +25,7 @@ class Engine {
   //  - Detects a collision between the player and any enemy
   //  - Removes enemies that are too low from the enemies array
   gameLoop = () => {
+    //
     // This code is to see how much time, in milliseconds, has elapsed since the last
     // time this method was called.
     // (new Date).getTime() evaluates to the number of milliseconds since January 1st, 1970 at midnight.
